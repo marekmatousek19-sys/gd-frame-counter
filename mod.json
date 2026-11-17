@@ -1,0 +1,83 @@
+{
+    "geode": "5.11.2",
+    "gd": {
+        "win": "*"
+    },
+    "id": "gdplayer.frame-counter",
+    "name": "Frame Counter",
+    "version": "v1.4.0",
+    "developer": "GD Player",
+    "description": "Simple FPS, BPS and total frames counter that turns red when your FPS drops.",
+    "tags": ["utility", "interface", "enhancement"],
+    "settings": {
+        "enabled": {
+            "type": "bool",
+            "name": "Show counter",
+            "description": "Show the FPS counter on screen",
+            "default": true
+        },
+        "show-bps": {
+            "type": "bool",
+            "name": "Show BPS",
+            "description": "Also show blocks per second while playing a level",
+            "default": true
+        },
+        "show-frames": {
+            "type": "bool",
+            "name": "Show total frames",
+            "description": "Also show the total frame count since the game was opened",
+            "default": true
+        },
+        "macro-enabled": {
+            "type": "bool",
+            "name": "Macro recorder",
+            "description": "Record your inputs with F5, replay every attempt with F6, clear with F7",
+            "default": true
+        },
+        "cbs": {
+            "type": "bool",
+            "name": "Click Between Steps",
+            "description": "Records and replays inputs at sub-step precision inside each 1/240s tick, using GD's native Click Between Steps option",
+            "default": true
+        },
+        "unlock-fps": {
+            "type": "bool",
+            "name": "Unlock FPS",
+            "description": "Runs the game at your target FPS so every counted frame is frame-perfect (1/240s each at 240)",
+            "default": true
+        },
+        "target-fps": {
+            "type": "int",
+            "name": "Target FPS",
+            "description": "FPS the game runs at when Unlock FPS is on (2 frames here = 1 frame at 120fps when set to 240)",
+            "default": 240,
+            "min": 60,
+            "max": 960,
+            "control": {
+                "slider": true
+            }
+        },
+        "low-fps": {
+            "type": "int",
+            "name": "Low FPS threshold",
+            "description": "The counter turns red when FPS falls below this",
+            "default": 55,
+            "min": 10,
+            "max": 360,
+            "control": {
+                "slider": true
+            }
+        },
+        "scale": {
+            "type": "float",
+            "name": "Counter size",
+            "description": "Size of the counter text",
+            "default": 0.5,
+            "min": 0.2,
+            "max": 1.5,
+            "control": {
+                "slider": true
+            }
+        }
+    }
+}
